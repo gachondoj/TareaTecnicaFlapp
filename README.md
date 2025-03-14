@@ -1,8 +1,8 @@
 # TareaTecnicaFlapp
 
-Como correr:
+## Como correr:
 
-## Opcion 1: Docker
+### Opcion 1: Docker
 
 1.  Crear imagenes
 ````
@@ -14,9 +14,9 @@ docker-compose up --build -d
 docker-compose up
 ````
 
-## Opcion 2: Sin Docker
+### Opcion 2: Sin Docker
 
-### Front End
+#### Front End
 
 1. Instalar dependencias
 ````
@@ -28,7 +28,7 @@ npm install
 npm run dev
 ````
 
-### Back End
+#### Back End
 
 1. Instalar dependencias
 ````
