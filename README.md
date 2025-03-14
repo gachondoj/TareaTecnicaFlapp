@@ -1,4 +1,6 @@
-# TareaTecnicaFlapp# TareaTecnicaFlapp
+# TareaTecnicaFlapp
+
+Como correr:
 
 ## Opcion 1: Docker
 
@@ -16,8 +18,6 @@ docker-compose up
 
 ### Front End
 
-Como correr:
-
 1. Instalar dependencias
 ````
 npm install
@@ -29,8 +29,6 @@ npm run dev
 ````
 
 ### Back End
-
-Como correr:
 
 1. Instalar dependencias
 ````
