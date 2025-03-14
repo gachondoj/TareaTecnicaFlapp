@@ -4,12 +4,18 @@
 
 ### Opcion 1: Docker
 
-1.  Crear imagenes
+1. Agregar llaves de apis Uder y TraeloYa a .env de BackEnd
+````
+UDER_KEY=[KEY]
+TRAELO_KEY=[KEY]
+````
+
+2.  Crear imagenes
 ````
 docker-compose up --build -d
 ````
 
-2. Levantar contenedores
+3. Levantar contenedores
 ````
 docker-compose up
 ````
