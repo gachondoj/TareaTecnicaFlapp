@@ -7,8 +7,7 @@ const agent = new https.Agent({
   rejectUnauthorized: false,
 });
 
-
-const dolarPrice = 1000;
+const adjustTraelo = 10000000
 
 
 router.post('/', async (ctx, next) => {
@@ -123,21 +122,22 @@ router.post('/', async (ctx, next) => {
 
     console.log('uder', uderRes.status, uderJson)
 
+
     if (uderJson.error && traeloJson.error) {
       ctx.status = 400
       ctx.body = {"body": 'No hay envíos disponibles :('}
     } else if (uderJson.error) {
       ctx.status = 200
-      ctx.body = { courier: 'TraeloYa', price: traeloJson.deliveryOffers.pricing.total}
+      ctx.body = { courier: 'TraeloYa', price: (traeloJson.deliveryOffers.pricing.total / adjustTraelo).toFixed(2)}
     } else if (traeloJson.error) {
       ctx.status = 200
-      ctx.body = { courier: 'Uder', price: uderJson.fee * dolarPrice}
-    } else if (uderJson.fee * dolarPrice > traeloJson.deliveryOffers.pricing.total) {
+      ctx.body = { courier: 'Uder', price: uderJson.fee}
+    } else if (uderJson.fee > (traeloJson.deliveryOffers.pricing.total / adjustTraelo).toFixed(2)) {
       ctx.status = 200
-      ctx.body = { courier: 'TraeloYa', price: traeloJson.deliveryOffers.pricing.total}
+      ctx.body = { courier: 'TraeloYa', price: (traeloJson.deliveryOffers.pricing.total / adjustTraelo).toFixed(2)}
     } else {
       ctx.status = 200
-      ctx.body = { courier: 'Uder', price: uderJson.fee * dolarPrice}
+      ctx.body = { courier: 'Uder', price: uderJson.fee}
     }
 
 

@@ -1,4 +1,4 @@
-# TareaTecnicaFlapp
+# TareaTecnicaFlapp# TareaTecnicaFlapp
 
 ## Front End
 
@@ -36,5 +36,4 @@ npm run dev
 
 ## Supuestos
 
-1. El precio entregado por la api de Uder esta en USD por lo que se pasó a CLP tomando el valor del dólar como $1000
-2. 
+1. Las tarifas entregadas por la tarificación de Traelo Ya eran demasiado altas por lo que se ajustaron para que calzaran con las de Uder en terminos de dimensiones (Dividir por 10.000.000).
