@@ -1,6 +1,20 @@
 # TareaTecnicaFlapp# TareaTecnicaFlapp
 
-## Front End
+## Opcion 1: Docker
+
+1.  Crear imagenes
+````
+docker-compose up --build -d
+````
+
+2. Levantar contenedores
+````
+docker-compose up
+````
+
+## Opcion 2: Sin Docker
+
+### Front End
 
 Como correr:
 
@@ -14,7 +28,7 @@ npm install
 npm run dev
 ````
 
-## Back End
+### Back End
 
 Como correr:
 
