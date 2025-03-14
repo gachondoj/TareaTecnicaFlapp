@@ -29,7 +29,7 @@
    })
 
 </script>
-<div class="bg-[#C9C9C9] h-screen w-full flex flex-col items-center">
+<div class="bg-[#C9C9C9] min-h-screen h-fit w-full flex flex-col items-center p-2">
     {#if cart}
         {#if courier && price}
         <div class="bg-[#FFFFFF] w-[30rem] text-center p-2 rounded-md mt-2">
@@ -70,7 +70,7 @@
         <div class="flex space-x-2 mt-5">
             <Button title='Cotizar despacho' disabled={disabelButton} onclick={async () => {
                     try {
-                    const res =await fetch('http://localhost:3000/cart', {
+                    const res =await fetch('http://localhost:3000/api/cart', {
                         method: 'POST',
                         headers: {
                             "Accept": "application/json",
