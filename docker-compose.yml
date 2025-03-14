@@ -1,0 +1,18 @@
+version: '3'
+services:
+  backend:
+    build: ./BackEnd
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./BackEnd:/src
+    environment:
+      - NODE_ENV=production
+
+  frontend:
+    build: ./FrontEnd
+    ports:
+      - "5173:5173"
+    command: npm run dev -- --host
+    depends_on:
+      - backend

@@ -29,7 +29,7 @@
    })
 
 </script>
-<div class="bg-[#C8DDF0] h-screen w-full flex flex-col items-center">
+<div class="bg-[#C9C9C9] h-screen w-full flex flex-col items-center">
     {#if cart}
         {#if courier && price}
         <div class="bg-[#FFFFFF] w-[30rem] text-center p-2 rounded-md mt-2">
@@ -40,7 +40,7 @@
 
         <div class="flex flex-col space-y-2 p-1">
             {#each cart.products as product}
-                <div class="w-[30rem] bg-[#6FEDD7] p-[5px] rounded-md">
+                <div class="w-[30rem] bg-[#FFFFFF] p-[5px] rounded-md">
                     <div class="flex justify-between">
                         <p>{product.title}</p>
                         <p>Precio: ${product.price}</p>
@@ -102,7 +102,7 @@
                     }
 
                 } catch (err) {
-                    alert("Hubo un error inesperado, por favor intentalo denuevo mas tarde")
+                    alert("Hubo un error inesperado, por favor intentalo denuevo más tarde")
                 }
 
                     

@@ -29,7 +29,7 @@
     }
 </script>
 
-<div class="bg-[#C8DDF0] h-screen w-full flex flex-col items-center justify-center">
+<div class="bg-[#C9C9C9] h-screen w-full flex flex-col items-center justify-center">
     <div>
         <Button title='Generar carrito' onclick={async () => {
             try {
@@ -37,7 +37,7 @@
                 const json = await res.json();
                 data = json.products;
             } catch (error) {
-                console.log(error);
+                alert("Hubo un error inesperado, por favor intente denuevo más tarde")
             }
         }} />
 
@@ -49,7 +49,7 @@
 
     <div class="grid grid-cols-3 gap-5 p-5">
         {#each data as item}
-            <div class="p-[10px] rounded-md bg-[#6FEDD7]">
+            <div class="p-[10px] rounded-md w-[20rem] bg-[#FFFFFF] flex flex-col justify-between">
                 <p class="font-bold">Title: {item.title}</p>
                 <div class="flex justify-between">
                     <p>Price: {item.price}</p>
